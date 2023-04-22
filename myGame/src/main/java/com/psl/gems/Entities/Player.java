@@ -2,10 +2,14 @@ package com.psl.gems.Entities;
 
 import java.util.*;
 
-public class Player extends Game{
+public class Player extends PackOfCards{
     String name;
 
     List<Card> cardsInHand = new ArrayList<>();
+
+    int highCardValue;
+//List<Card> cardsInHand = Arrays.asList();
+
 
     public Player() {
     }
@@ -13,6 +17,7 @@ public class Player extends Game{
     public Player(String name, List<Card> cardsInHand) {
         this.name = name;
         this.cardsInHand = cardsInHand;
+        this.highCardValue = 0;
     }
 
     public String getName() {
@@ -31,5 +36,12 @@ public class Player extends Game{
         this.cardsInHand = cardsInHand;
     }
 
+    public int getHighCardValue() {
+        return highCardValue;
+    }
+
+    public void setHighCardValue(int highCardValue) {
+        this.highCardValue = highCardValue;
+    }
 
 }
